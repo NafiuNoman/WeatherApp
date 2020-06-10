@@ -5,6 +5,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -34,10 +35,17 @@ public void Start()
         public void onResponse(JSONObject response) {
 
             try {
-                JSONObject obj = response.getJSONObject("sys");
+                JSONObject obj = response.getJSONObject("main");
+                JSONObject obj2 = response.getJSONObject("sys");
 
 
-                MainActivity.txt.setText(obj.getString("country"));
+                JSONArray array = response.getJSONArray("weather");
+                JSONObject arrayObj = array.getJSONObject(0);
+
+                MainActivity.status.setText(arrayObj.getString("main"));
+                MainActivity.temp.setText(obj.getString("temp"));
+                MainActivity.country.setText(obj2.getString("country"));
+
 
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -57,10 +65,6 @@ public void Start()
 
 
 }
-
-
-
-
 
 
 }

@@ -16,7 +16,9 @@ import com.android.volley.toolbox.Volley;
 public class MainActivity extends AppCompatActivity  {
 
 
-    public static TextView txt ;
+    public static TextView temp ;
+    public static TextView country ;
+    public static TextView status ;
     Button btn;
     EditText editText;
     String city;
@@ -36,7 +38,10 @@ public class MainActivity extends AppCompatActivity  {
 
 
 
-        txt=findViewById(R.id.display);
+        temp=findViewById(R.id.displayTemp);
+        country=findViewById(R.id.displayCountry);
+        status=findViewById(R.id.displayStatus);
+
         btn=findViewById(R.id.btn);
         editText=findViewById(R.id.edit);
 
