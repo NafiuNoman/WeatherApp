@@ -4,9 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#cceabb"
-    android:orientation="vertical"
-    android:weightSum="8"
+    android:background="@drawable/nature2"
     tools:context=".MainActivity">
 
 
@@ -15,54 +13,128 @@
       android:layout_width="200sp"
       android:layout_height="50sp"
       android:layout_centerHorizontal="true"
-
-      android:hint="city Name"
-      android:textColorHint="#fff"
+      android:hint=" Enter City Name"
+      android:textColorHint="#80E0F3"
+      android:textColor="#fff"
       android:inputType="text"
+      android:fontFamily="@font/regular"
+      android:textAlignment="center"
+      android:background="@drawable/edittextstyle"
+
+
       />
 
   <Button
       android:id="@+id/btn"
-      android:layout_width="150sp"
+      android:layout_width="40sp"
       android:layout_height="40sp"
       android:layout_below="@+id/edit"
+      android:layout_marginTop="8sp"
       android:layout_centerHorizontal="true"
-      android:text="click"/>
-
-
-
+      android:background="@drawable/buttonstyle"
+      android:text="O"
+      android:fontFamily="@font/regular"
+      android:textColor="#FFFFFF"/>
 
 
   <TextView
       android:id="@+id/displayTemp"
-      android:layout_width="match_parent"
+      android:layout_width="wrap_content"
       android:layout_height="wrap_content"
       android:layout_below="@+id/btn"
-      android:layout_marginTop="50sp"
-      android:layout_marginLeft="100sp"
-      android:layout_marginRight="100sp"
-      android:textColor="#3FDD46"
-      android:textSize="50sp"
-       />
+      android:layout_marginTop="31dp"
+      android:layout_centerHorizontal="true"
+      android:fontFamily="@font/regular"
+      android:text="29"
+      android:textAlignment="center"
+      android:textColor="#E8F0F5"
+      android:textSize="70sp" />
 
   <TextView
+
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignTop="@+id/displayTemp"
+      android:text="°C"
+      android:textColor="#E8F0F5"
+      android:layout_toRightOf="@+id/displayTemp"
+      android:textSize="40sp" />
+
+  <TextView
+      android:id="@+id/displayStatus"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/displayTemp"
+      android:layout_centerHorizontal="true"
+      android:textColor="#E8F0F5"
+      android:text="Cloudy"
+      android:textAlignment="center"
+
+      android:textSize="40sp"
+       />
+
+
+
+  <TextView
+      android:id="@+id/displayMax"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/displayStatus"
+      android:layout_marginLeft="20sp"
+      android:text="32"
+      android:textColor="#E8F0F5"
+      android:textSize="35sp"
+      />
+
+   <TextView
+      android:id="@+id/maxTemp"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+
+      android:layout_toRightOf="@+id/displayMax"
+       android:layout_alignBottom="@+id/displayMax"
+      android:textSize="20sp"
+      android:text="max"
+      android:textColor="#E8F0F5"/>
+
+
+
+  <TextView
+      android:id="@+id/displayMin"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/displayStatus"
+      android:layout_toRightOf="@+id/displayStatus"
+      android:layout_marginLeft="30sp"
+      android:text="30"
+      android:textColor="#E8F0F5"
+      android:textSize="35sp"
+      />
+
+
+  <TextView
+      android:id="@+id/minTemp"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+
+      android:layout_toRightOf="@+id/displayMin"
+      android:layout_alignBottom="@+id/displayMin"
+      android:textSize="20sp"
+      android:text="min"
+      android:textColor="#E8F0F5"/>
+
+
+
+
+<TextView
       android:id="@+id/displayCountry"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:layout_below="@+id/displayTemp"
+      android:layout_below="@+id/displayStatus"
+      android:layout_marginTop="150sp"
       android:layout_gravity="center"
-      android:textColor="#3FDD46"
-      android:textSize="50sp"
-       />
-
-<TextView
-      android:id="@+id/displayStatus"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_below="@+id/displayCountry"
-      android:layout_marginTop="50sp"
-      android:layout_gravity="center"
-      android:textColor="#3FDD46"
+      android:text="Bangladesh"
+      android:textColor="#E8F0F5"
       android:textSize="50sp"
        />
 

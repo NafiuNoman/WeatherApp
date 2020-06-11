@@ -19,6 +19,9 @@ public class MainActivity extends AppCompatActivity  {
     public static TextView temp ;
     public static TextView country ;
     public static TextView status ;
+    public static TextView minTemp;
+    public static TextView maxTemp ;
+
     Button btn;
     EditText editText;
     String city;
@@ -35,10 +38,9 @@ public class MainActivity extends AppCompatActivity  {
 
        requestQueue= Volley.newRequestQueue(this);
 
-
-
-
         temp=findViewById(R.id.displayTemp);
+        minTemp=findViewById(R.id.displayMin);
+        maxTemp=findViewById(R.id.displayMax);
         country=findViewById(R.id.displayCountry);
         status=findViewById(R.id.displayStatus);
 
