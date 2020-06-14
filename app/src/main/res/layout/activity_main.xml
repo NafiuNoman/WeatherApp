@@ -72,6 +72,7 @@
       android:layout_centerHorizontal="true"
       android:textColor="#E8F0F5"
       android:text="Cloudy"
+      android:fontFamily="@font/regular"
       android:textAlignment="center"
 
       android:textSize="40sp"
@@ -86,6 +87,7 @@
       android:layout_below="@+id/displayStatus"
       android:layout_marginLeft="20sp"
       android:text="32"
+      android:fontFamily="@font/regular"
       android:textColor="#E8F0F5"
       android:textSize="35sp"
       />
@@ -99,6 +101,8 @@
        android:layout_alignBottom="@+id/displayMax"
       android:textSize="20sp"
       android:text="max"
+       android:fontFamily="@font/regular"
+
       android:textColor="#E8F0F5"/>
 
 
@@ -111,6 +115,7 @@
       android:layout_toRightOf="@+id/displayStatus"
       android:layout_marginLeft="30sp"
       android:text="30"
+      android:fontFamily="@font/regular"
       android:textColor="#E8F0F5"
       android:textSize="35sp"
       />
@@ -125,6 +130,7 @@
       android:layout_alignBottom="@+id/displayMin"
       android:textSize="20sp"
       android:text="min"
+      android:fontFamily="@font/regular"
       android:textColor="#E8F0F5"/>
 
 
@@ -140,8 +146,11 @@
 
       android:layout_gravity="center"
       android:text="Bangladesh"
+      android:fontFamily="@font/regular"
       android:textColor="#E8F0F5"
       android:textSize="50sp"
+
+
        />
 
 
