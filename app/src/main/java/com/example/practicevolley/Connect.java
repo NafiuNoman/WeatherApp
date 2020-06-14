@@ -26,7 +26,7 @@ public void Start()
 {
 
    // String url="https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=90c80ed73e6258c82389e83487f872d5";
-    String url="https://api.openweathermap.org/data/2.5/weather?q="+city+"&units=metric&appid=90c80ed73e6258c82389e83487f872d5";
+      String url="https://api.openweathermap.org/data/2.5/weather?q="+city+"&units=metric&appid=90c80ed73e6258c82389e83487f872d5";
 
 
 
@@ -45,7 +45,58 @@ public void Start()
                 JSONArray array = response.getJSONArray("weather");
                 JSONObject arrayObj = array.getJSONObject(0);
 
-                MainActivity.status.setText(arrayObj.getString("main"));
+               // MainActivity.status.setText(arrayObj.getString("main"));
+
+                String condition= arrayObj.getString("main");
+
+                MainActivity.status.setText(condition);
+
+                String s1="Clear";
+                String s2="Clouds";
+                String s3="Rain";
+                String s4="Haze";
+                String s5="Snow";
+
+
+                //condition==s1 that condition was not working
+
+               /* The X.contentEquals() method searches a string to find out if it contains the exact
+                same sequence of characters in the specified string or StringBuffer.
+
+                Returns true if the characters exist and false if not.
+
+                */
+
+
+                if(condition.contentEquals(s1))
+                {
+                    MainActivity.rel.setBackgroundResource(R.drawable.clearbac);
+
+
+                }
+                else if(condition.contentEquals(s2))
+                {
+                    MainActivity.rel.setBackgroundResource(R.drawable.cloudbac);
+
+                }
+                else if(condition.contentEquals(s3))
+                {
+                    MainActivity.rel.setBackgroundResource(R.drawable.rainbac);
+
+                } else if(condition.contentEquals(s4))
+                {
+                    MainActivity.rel.setBackgroundResource(R.drawable.hazebac);
+
+                }
+                else if(condition.contentEquals(s5))
+                {
+                    MainActivity.rel.setBackgroundResource(R.drawable.snowbac);
+
+                }
+                else
+                {
+                    MainActivity.rel.setBackgroundResource(R.drawable.nature1);
+                }
 
 
                 /*its working but its cant show int value its shows doubble value case getString();fuction take value as a string so its doubble came within it
