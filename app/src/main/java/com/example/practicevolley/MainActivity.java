@@ -1,11 +1,13 @@
 package com.example.practicevolley;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.os.Bundle;
 
 import android.text.Layout;
 import android.view.View;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -28,11 +30,10 @@ public class MainActivity extends AppCompatActivity  {
 
 
 
+    SwipeRefreshLayout swipeRefreshLayout;
     Button btn;
     EditText editText;
     String city;
-
-
 
 
 
@@ -57,6 +58,11 @@ public class MainActivity extends AppCompatActivity  {
         btn=findViewById(R.id.btn);
         editText=findViewById(R.id.edit);
 
+        //swipeRefreshLayout = findViewById(R.id.swipeId);
+
+
+        rel.setAnimation(AnimationUtils.loadAnimation(this,R.anim.animate));
+
 
 
 
@@ -78,6 +84,19 @@ public class MainActivity extends AppCompatActivity  {
             }
 
         });
+
+
+//        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+//            @Override
+//            public void onRefresh() {
+//
+//                Connect connect = new Connect(city);
+//                connect.Start();
+//
+//                swipeRefreshLayout.setRefreshing(false);
+//
+//            }
+//        });
 
 
 
