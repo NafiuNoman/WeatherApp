@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity  {
     public static TextView status ;
     public static TextView minTemp;
     public static TextView maxTemp ;
+    public static TextView aqi;
     public static RelativeLayout rel ;
 
 
@@ -53,6 +54,8 @@ public class MainActivity extends AppCompatActivity  {
         maxTemp=findViewById(R.id.displayMax);
         country=findViewById(R.id.displayCountry);
         status=findViewById(R.id.displayStatus);
+        aqi = findViewById(R.id.aqiId);
+
         rel = findViewById(R.id.layout);
 
         btn=findViewById(R.id.btn);

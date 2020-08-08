@@ -137,17 +137,25 @@
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
 
-        android:layout_marginTop="150sp"
+        android:layout_marginTop="115sp"
         android:fontFamily="@font/regular"
         android:text="Bangladesh"
         android:textColor="#E8F0F5"
         android:textSize="50sp"
-
-
         />
 
-
-
+    <TextView
+        android:id="@+id/aqiId"
+        android:layout_width="113dp"
+        android:layout_height="95dp"
+        android:layout_below="@+id/displayCountry"
+        android:textColor="#E91E63"
+        android:text="AQI"
+        android:gravity="center"
+        android:textSize="35sp"
+        android:fontFamily="@font/regular"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="41dp" />
 
 
 </RelativeLayout>

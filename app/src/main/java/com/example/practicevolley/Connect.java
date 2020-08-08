@@ -1,4 +1,6 @@
 package com.example.practicevolley;
+import android.app.DownloadManager;
+
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -27,7 +29,7 @@ public void Start()
 
    // String url="https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=90c80ed73e6258c82389e83487f872d5";
       String url="https://api.openweathermap.org/data/2.5/weather?q="+city+"&units=metric&appid=90c80ed73e6258c82389e83487f872d5";
-      // String url = "https://api.waqi.info/feed/"+city+"/?token=6949108ccebe025d0362103e338d7727dfc999cf";
+       String url2 = "https://api.waqi.info/feed/"+city+"/?token=6949108ccebe025d0362103e338d7727dfc999cf";
 
 
 
@@ -162,7 +164,32 @@ public void Start()
     });
 
 
+    JsonObjectRequest jsonObjectRequestAQI = new JsonObjectRequest(Request.Method.GET, url2, null, new Response.Listener<JSONObject>() {
+        @Override
+        public void onResponse(JSONObject response) {
+
+            try {
+                JSONObject jsonObject =response.getJSONObject("data");
+
+               int data = jsonObject.getInt("aqi");
+               MainActivity.aqi.setText(""+data);
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+        }
+    }, new Response.ErrorListener() {
+        @Override
+        public void onErrorResponse(VolleyError error) {
+
+        }
+    });
+
+
     MainActivity.requestQueue.add(jsonObjectRequest);
+    MainActivity.requestQueue.add(jsonObjectRequestAQI);
+
 
 
 }
