@@ -1,65 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2196F3"
-    android:orientation="vertical"
-    android:weightSum="8"
+    android:background="@drawable/nature2"
     tools:context=".MainActivity">
 
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:layout_weight="1"
-    >
 
 
-  <EditText
-      android:id="@+id/edit"
-      android:layout_width="200sp"
-      android:layout_height="80sp"
-      android:hint="city Name"
-      android:textColorHint="#fff"
-      android:inputType="text"
-      />
-
-  <Button
-      android:id="@+id/btn"
-      android:layout_width="150sp"
-      android:layout_height="80sp"
-      android:text="click"/>
+    <EditText
+        android:id="@+id/edit"
+        android:layout_width="200sp"
+        android:layout_height="50sp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/edittextstyle"
+        android:fontFamily="@font/regular"
+        android:gravity="center"
+        android:hint=" Enter City Name"
+        android:inputType="text"
+        android:textColor="#fff"
+        android:textColorHint="#80E0F3"
 
 
+        />
 
-</LinearLayout>
-
-
-
-
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:layout_weight="7"
-    >
-
-
-  <TextView
-      android:id="@+id/display"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:layout_gravity="center"
-      android:textColor="#3FDD46"
-      android:textSize="50sp"
-       />
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:layout_below="@+id/edit"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8sp"
+        android:background="@drawable/buttonstyle"
+        android:fontFamily="@font/regular"
+        android:text="O"
+        android:textColor="#FFFFFF" />
 
 
+    <TextView
+        android:id="@+id/displayTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="31dp"
+        android:fontFamily="@font/regular"
+        android:text="29"
+        android:textAlignment="center"
+        android:textColor="#E8F0F5"
+        android:textSize="70sp" />
 
-</LinearLayout>
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/displayTemp"
+        android:layout_toRightOf="@+id/displayTemp"
+        android:text="°C"
+        android:textColor="#E8F0F5"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/displayStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/displayTemp"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/regular"
+        android:text="Cloudy"
+        android:textAlignment="center"
+
+        android:textColor="#E8F0F5"
+        android:textSize="40sp" />
+
+
+    <TextView
+        android:id="@+id/displayMax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/displayStatus"
+        android:layout_marginLeft="20sp"
+        android:fontFamily="@font/regular"
+        android:text="32"
+        android:textColor="#E8F0F5"
+        android:textSize="35sp" />
+
+    <TextView
+        android:id="@+id/maxTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignBottom="@+id/displayMax"
+        android:layout_toRightOf="@+id/displayMax"
+        android:fontFamily="@font/regular"
+        android:text="max"
+        android:textColor="#E8F0F5"
+
+        android:textSize="20sp" />
+
+
+    <TextView
+        android:id="@+id/displayMin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/displayStatus"
+        android:layout_marginLeft="30sp"
+        android:layout_toRightOf="@+id/displayStatus"
+        android:fontFamily="@font/regular"
+        android:text="30"
+        android:textColor="#E8F0F5"
+        android:textSize="35sp" />
+
+
+    <TextView
+        android:id="@+id/minTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignBottom="@+id/displayMin"
+        android:layout_toRightOf="@+id/displayMin"
+        android:fontFamily="@font/regular"
+        android:text="min"
+        android:textColor="#E8F0F5"
+        android:textSize="20sp" />
+
+
+    <TextView
+        android:id="@+id/displayCountry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/displayStatus"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+
+        android:layout_marginTop="150sp"
+        android:fontFamily="@font/regular"
+        android:text="Bangladesh"
+        android:textColor="#E8F0F5"
+        android:textSize="50sp"
+
+
+        />
 
 
 
-</LinearLayout>
+
+
+</RelativeLayout>
